@@ -44,7 +44,6 @@ function getContractAddress(currentChainId: number) {
 
   const DISTRIBUTER_CONTRACT_ADDRESS
     = ENV[`${ENV_PREFIX_REACT_APP}_${networkName.toUpperCase()}_DISTRIBUTER_CONTRACT_ADDRESS`]!;
-
   return { DISTRIBUTER_CONTRACT_ADDRESS };
 }
 
