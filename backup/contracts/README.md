@@ -102,7 +102,8 @@ callをimplementation側へ転送する`_fallback`関数を実装している。
 
 
 # Implementation Side Contracts
-コントラクトの構造：
+コントラクトの継承の構造は以下の通り：
+
 - SimpleMerkleDistributer
   - AbstractMerkleDistributer
     - AccessControlEnumerableUpgradeable
@@ -249,7 +250,11 @@ MODERATOR_ROLEのロールを状態変数を作成。ACESS ROLE管理用。
 Reentrancy攻撃から守るためのコントラクト。継承することで、`nonReentrant`modifierが使えるようになる。
 
 
+### ->継承 AccessControlEnumerableUpgradeable
+- ロールベースのaccess controlができるようにするコントラクト
+- 今回はADMIN, MODERATORについてのロールを設定している
 
-
-
+### import IERC20Metadata
+- IERC20に加えて、`decimals()`、`name()`、`symbol()`のインターフェイスが追加されている。
+- 今回`decimals()`、`transfer()`、`symbol()`が使われている
 
