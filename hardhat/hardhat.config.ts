@@ -26,26 +26,32 @@ function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
 const config: HardhatUserConfig = {
   solidity: '0.8.4',
   networks: {
-    // rinkeby: {
-    //   url: ENV.RINKEBY_URL || "",
-    //   accounts:
-    //     [
-    //       ENV.RINKEBY_PRIVATE_KEY_OWNER == null
-    //         ? null : ENV.RINKEBY_PRIVATE_KEY_OWNER,
-    //       ENV.RINKEBY_PRIVATE_KEY_OTHER1 == null
-    //         ? null : ENV.RINKEBY_PRIVATE_KEY_OTHER1,
-    //     ].filter(notEmpty),
-    //   chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.RINKEBY,
-    // },
-    geth_localhost: {
-      url: 'http://127.0.0.1:8545',
-      chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.GETH_LOCALHOST,
+    rinkeby: {
+      url: ENV.RINKEBY_URL || "",
+      accounts:
+        [
+          ENV.RINKEBY_PRIVATE_KEY_OWNER == null
+            ? null : ENV.RINKEBY_PRIVATE_KEY_OWNER
+          // ENV.RINKEBY_PRIVATE_KEY_OTHER1 == null
+          //   ? null : ENV.RINKEBY_PRIVATE_KEY_OTHER1,
+        ].filter(notEmpty),
+      chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.RINKEBY,
     },
+    // geth_localhost: {
+    //   url: 'http://127.0.0.1:8545',
+    //   chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.GETH_LOCALHOST,
+    // },
   },
   gasReporter: {
     enabled: ENV.REPORT_GAS !== undefined,
     currency: 'USD',
   },
+  etherscan: {
+    // apiKey: {
+    //   rinkeby: ETHERSCAN_API_KEY
+    // }
+    apiKey: ENV.ETHERSCAN_API_KEY
+  }
 }
 
 export default config

@@ -249,4 +249,5 @@ export {
     mintSimpleToken,
     getERC20ContractAddress,
     grantRole,
+    getContractAddress
 };

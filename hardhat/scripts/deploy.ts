@@ -25,12 +25,12 @@ const {
 } = COMMON_VARIABLES_AND_FUNCTIONS;
 
 /***** Change following values based on your needs *****/
-const INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS = 10000;
+const INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS = 3;
 const SHOULD_RECIPIENT_CLAIM_REWARD = true;
 const SHOULD_GENERATE_ENV_FILE = true;
 const SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS = true;
 const SHOULD_USE_JSON_FOR_TARGET_RECIPIENTS = true;
-const SHOULD_USE_EXTERNAL_ERC20_TOKEN = false; // Set true if you want to use external token address
+const SHOULD_USE_EXTERNAL_ERC20_TOKEN = true; // Set true if you want to use external token address
 
 /*
  * This script deploys contracts using ERC20 token. In local mode, it uses
@@ -78,6 +78,7 @@ async function main() {
             erc20Address: targetERC20TokenAddress,
         });
 
+
     console.log(`ERC20 contract deployed to ${erc20.address}`);
     console.log(`Distributer token contract deployed to ${distributer.address}`);
     console.log(`Owner address is ${owner.address}`);
@@ -85,6 +86,7 @@ async function main() {
         info => console.log(`Recipient address is ${info.address}`)
     );
 
+    console.log("mint: ")
     if (!SHOULD_USE_EXTERNAL_ERC20_TOKEN) {
         await mintSimpleToken({
             amountWithoutDecimals: INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS,
@@ -92,13 +94,15 @@ async function main() {
             owner,
         });
     }
+    console.log("transfer: ")
     await transferERC20({
         amount: INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS,
         targetAddress: distributer.address,
         erc20: erc20,
         owner,
     });
-
+    console.log("transfer is over! ")
+    
     const distributerBalance = await erc20.balanceOf(distributer.address);
     console.log(
         'The balance of distributer contract:',
