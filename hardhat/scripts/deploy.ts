@@ -25,7 +25,7 @@ const {
 } = COMMON_VARIABLES_AND_FUNCTIONS;
 
 /***** Change following values based on your needs *****/
-const INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS = 3;
+const INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS = 10;
 const SHOULD_RECIPIENT_CLAIM_REWARD = true;
 const SHOULD_GENERATE_ENV_FILE = true;
 const SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS = true;
@@ -79,22 +79,22 @@ async function main() {
         });
 
 
-    console.log(`ERC20 contract deployed to ${erc20.address}`);
+    console.log(`ERC20 contract ${SHOULD_USE_EXTERNAL_ERC20_TOKEN ? "already exists and its address is: " : "newly deployed to address: "} ${erc20.address}`);
     console.log(`Distributer token contract deployed to ${distributer.address}`);
     console.log(`Owner address is ${owner.address}`);
     recipientsInfo.forEach(
         info => console.log(`Recipient address is ${info.address}`)
     );
 
-    console.log("mint: ")
     if (!SHOULD_USE_EXTERNAL_ERC20_TOKEN) {
+        console.log("mint: ")
         await mintSimpleToken({
             amountWithoutDecimals: INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS,
             erc20,
             owner,
         });
     }
-    console.log("transfer: ")
+    console.log(`transfer amount: ${INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS}`)
     await transferERC20({
         amount: INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS,
         targetAddress: distributer.address,

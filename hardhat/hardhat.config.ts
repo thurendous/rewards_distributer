@@ -37,6 +37,16 @@ const config: HardhatUserConfig = {
         ].filter(notEmpty),
       chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.RINKEBY,
     },
+    mumbai: {
+         url: "https://rpc-mumbai.maticvigil.com",
+         accounts:[
+          ENV.RINKEBY_PRIVATE_KEY_OWNER == null
+            ? null : ENV.RINKEBY_PRIVATE_KEY_OWNER
+          // ENV.RINKEBY_PRIVATE_KEY_OTHER1 == null
+          //   ? null : ENV.RINKEBY_PRIVATE_KEY_OTHER1,
+        ].filter(notEmpty),
+        chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.MUMBAI,
+       }
     // geth_localhost: {
     //   url: 'http://127.0.0.1:8545',
     //   chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.GETH_LOCALHOST,

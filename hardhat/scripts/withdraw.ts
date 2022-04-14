@@ -70,8 +70,8 @@ async function main() {
     console.log(`#### the USDC balacne of conract is: `)
     console.log((balance).toString())
     console.log(`---------------`)
-    // do the claim
-    console.log(`#### Claiming the token... `)
+    // do the Withdraw
+    console.log(`#### Withdrawing the token... `)
     const claimAllDepositsTx = await distributer.connect(owner).claimAllDiposits()
     await claimAllDepositsTx.wait()
     console.log(claimAllDepositsTx)

@@ -7,6 +7,7 @@ const NETWORK_NAMES = {
   MATIC: 'matic',
   RINKEBY: 'rinkeby',
   GETH_LOCALHOST: 'geth_localhost',
+  MUMBAI: 'mumbai',
 }
 
 // Set supported chain ids
@@ -15,6 +16,7 @@ const CHAIN_IDS = {
   RINKEBY: 4,
   MATIC: 137,
   GETH_LOCALHOST: 31337,
+  MUMBAI: 80001
 }
 
 // Specify which chain corresponds with network name
@@ -22,14 +24,16 @@ const CHAINS_IDS_AND_NETWORK_NAME_MAPPINGS: { [chainID: number]: string } = {
   [CHAIN_IDS.MAINNET]: NETWORK_NAMES.MAINNET,
   [CHAIN_IDS.RINKEBY]: NETWORK_NAMES.RINKEBY,
   [CHAIN_IDS.MATIC]: NETWORK_NAMES.MATIC,
+  [CHAIN_IDS.MUMBAI]: NETWORK_NAMES.MUMBAI,
   [CHAIN_IDS.GETH_LOCALHOST]: NETWORK_NAMES.GETH_LOCALHOST,
 }
 
 // Set chains that you want to support in the website. The website uses this setting.
 const SUPPORTED_CHAIN_IDS_IN_WEB = [
   //   CHAIN_IDS.MAINNET, // Comment out when supporting mainnet
-  CHAIN_IDS.RINKEBY,
+  // CHAIN_IDS.RINKEBY,
   // CHAIN_IDS.MATIC, // Comment out when supporting matic
+  CHAIN_IDS.MUMBAI,
   // CHAIN_IDS.GETH_LOCALHOST, // Comment out when testing on geth network.
 ]
 
