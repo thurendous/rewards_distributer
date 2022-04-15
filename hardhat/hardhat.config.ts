@@ -6,6 +6,7 @@ import '@openzeppelin/hardhat-upgrades'
 import '@typechain/hardhat'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
+import 'hardhat-contract-sizer'
 import { ENV } from './settings'
 import { COMMON_VARIABLES_AND_FUNCTIONS } from './settings'
 
@@ -24,7 +25,15 @@ function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
 }
 
 const config: HardhatUserConfig = {
-  solidity: '0.8.4',
+  solidity: {
+    version: '0.8.4',
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
   networks: {
     rinkeby: {
       url: ENV.RINKEBY_URL || "",
@@ -62,6 +71,13 @@ const config: HardhatUserConfig = {
     //   rinkeby: ETHERSCAN_API_KEY
     // }
     apiKey: ENV.POLYSCAN_API_KEY
+  },
+  contractSizer: {
+    alphaSort: true,
+    disambiguatePaths: false,
+    runOnCompile: true,
+    strict: true,
+    only: [],
   }
 }
 
