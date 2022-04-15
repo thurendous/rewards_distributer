@@ -26,7 +26,7 @@ function Header({ tokenImageURL }: { tokenImageURL: string }) {
                     <Text
                         fontSize={{ base: 'md', md: 'xl', lg: '3xl' }}
                         fontWeight="bold">
-                        Rewards Distributor
+                        JIP Rewards Distributor
                     </Text>
                 </HStack>
                 <Flex alignItems={'center'}>

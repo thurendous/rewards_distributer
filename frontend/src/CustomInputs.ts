@@ -32,8 +32,8 @@ const CHAINS_IDS_AND_NETWORK_NAME_MAPPINGS: { [chainID: number]: string } = {
 const SUPPORTED_CHAIN_IDS_IN_WEB = [
   //   CHAIN_IDS.MAINNET, // Comment out when supporting mainnet
   // CHAIN_IDS.RINKEBY,
-  // CHAIN_IDS.MATIC, // Comment out when supporting matic
-  CHAIN_IDS.MUMBAI,
+  CHAIN_IDS.MATIC, // Comment out when supporting matic
+  // CHAIN_IDS.MUMBAI,
   // CHAIN_IDS.GETH_LOCALHOST, // Comment out when testing on geth network.
 ]
 

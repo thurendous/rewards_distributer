@@ -1,22 +1,27 @@
 [
   {
     "address": "0x681575059a777E037F1d15eAED17d176e85Fd46D",
-    "amount": 1.2,
+    "amount": 0.05,
     "uniqueKey": "20210401"
   },
   {
     "address": "0xE8f9Ed46aB2F63bAe4e16Dda54E29B3526BDE627",
-    "amount": 1.23,
+    "amount": 0.04,
     "uniqueKey": "20210401"
   },
   {
     "address": "0xdB68cc3A15aDee6B70BC63f11b8Ae6eb0E83607F",
-    "amount": 2,
+    "amount": 0.03,
     "uniqueKey": "20210401"
   },
   {
     "address": "0xd3c198488737c467fd6ee8e1bCc88CB4f9f0049C",
-    "amount":3,
+    "amount":0.02,
+    "uniqueKey": "20210401"
+  },
+  {
+    "address": "0xA1936658a9516fb44A97c36a55e96ba3EEBDD647",
+    "amount":0.01,
     "uniqueKey": "20210401"
   }
 ]

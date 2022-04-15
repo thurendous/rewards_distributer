@@ -25,7 +25,7 @@ const {
 } = COMMON_VARIABLES_AND_FUNCTIONS;
 
 /***** Change following values based on your needs *****/
-const INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS = 10;
+const INITIAL_MINT_AMOUNT_WITHOUT_DECIMALS = 0.05;
 const SHOULD_RECIPIENT_CLAIM_REWARD = true;
 const SHOULD_GENERATE_ENV_FILE = true;
 const SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS = true;
@@ -44,6 +44,7 @@ async function main() {
     console.log(`SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS=${getYesOrNo(SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS)}`);
     console.log(`SHOULD_USE_JSON_FOR_TARGET_RECIPIENTS=${getYesOrNo(SHOULD_USE_JSON_FOR_TARGET_RECIPIENTS)}`);
     console.log(`SHOULD_USE_EXTERNAL_ERC20_TOKEN=${getYesOrNo(SHOULD_USE_EXTERNAL_ERC20_TOKEN)}`);
+
 
     const [owner, recipient1, recipient2] = await ethers.getSigners();
     const recipientsWithSignature = [recipient1, recipient2];

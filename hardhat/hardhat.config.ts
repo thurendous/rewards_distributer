@@ -37,15 +37,16 @@ const config: HardhatUserConfig = {
         ].filter(notEmpty),
       chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.RINKEBY,
     },
-    mumbai: {
-         url: "https://rpc-mumbai.maticvigil.com",
+    matic: {
+         url: ENV.MATIC_URL || "",
          accounts:[
-          ENV.RINKEBY_PRIVATE_KEY_OWNER == null
-            ? null : ENV.RINKEBY_PRIVATE_KEY_OWNER
+          ENV.MATIC_PRIVATE_KEY_OWNER == null
+            ? null : ENV.MATIC_PRIVATE_KEY_OWNER
           // ENV.RINKEBY_PRIVATE_KEY_OTHER1 == null
           //   ? null : ENV.RINKEBY_PRIVATE_KEY_OTHER1,
         ].filter(notEmpty),
-        chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.MUMBAI,
+        gasPrice: 31000000000,
+        chainId: COMMON_VARIABLES_AND_FUNCTIONS.CHAIN_IDS.MATIC,
        }
     // geth_localhost: {
     //   url: 'http://127.0.0.1:8545',
@@ -60,7 +61,7 @@ const config: HardhatUserConfig = {
     // apiKey: {
     //   rinkeby: ETHERSCAN_API_KEY
     // }
-    apiKey: ENV.ETHERSCAN_API_KEY
+    apiKey: ENV.POLYSCAN_API_KEY
   }
 }
 
