@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:local": "hardhat run --network hardhat",
+    "build": "hardhat compile && hardhat typechain",
+    "hnode": "hardhat node"
   },
   "keywords": [],
   "author": "",
@@ -48,6 +51,7 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.2",
     "@openzeppelin/contracts-upgradeable": "^4.4.2",
+    "hardhat-contract-sizer": "^2.5.1",
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.2.27"
   }

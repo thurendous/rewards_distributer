@@ -152,6 +152,7 @@ async function initialDeployAndCreateMerkleTree(options: {
     const { erc20Address, owner, recipientsInfo } = options;
 
     let targetERC20: ERC20Type | null = null;
+
     if (erc20Address == null) {
         const simpleToken = await (
             new SimpleTokenFactory(owner).connect(owner).deploy()
@@ -161,8 +162,8 @@ async function initialDeployAndCreateMerkleTree(options: {
     } else {
         targetERC20 = ERC20Factory.connect(erc20Address, owner);
     }
-
     const tokenDecimals = await targetERC20.decimals();
+
     let merkleTree = createMerkleTree({
         recipientsInfo,
         tokenDecimals,
@@ -249,4 +250,5 @@ export {
     mintSimpleToken,
     getERC20ContractAddress,
     grantRole,
+    getContractAddress
 };

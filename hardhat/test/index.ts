@@ -46,6 +46,8 @@ describe("Test using SimpleMerkleDistributer contract", () => {
         recipientsInfo: recipientsInfoAndTestScenarios.map(el => el.recipientInfo),
         testScenarios: recipientsInfoAndTestScenarios.map(el => el.testScenario),
       });
+      console.log(recipientsInfoAndTestScenarios.map(el => el.recipientInfo,))
+      console.log(recipientsInfoAndTestScenarios.map(el => el.testScenario))
     }
   );
 

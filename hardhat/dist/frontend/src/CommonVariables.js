@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CHAIN_IDS = exports.NETWORK_NAMES = exports.ENV_DISTRIBUTER_CONTRACT_ADDRESS = exports.ENV_ERC20_CONTRACT_ADDRESS = exports.ENV_PREFIX_REACT_APP = void 0;
+const CustomInputs_1 = require("./CustomInputs");
+Object.defineProperty(exports, "NETWORK_NAMES", { enumerable: true, get: function () { return CustomInputs_1.NETWORK_NAMES; } });
+Object.defineProperty(exports, "CHAIN_IDS", { enumerable: true, get: function () { return CustomInputs_1.CHAIN_IDS; } });
+const ENV_PREFIX_REACT_APP = "REACT_APP";
+exports.ENV_PREFIX_REACT_APP = ENV_PREFIX_REACT_APP;
+const ENV_ERC20_CONTRACT_ADDRESS = "ERC20_CONTRACT_ADDRESS";
+exports.ENV_ERC20_CONTRACT_ADDRESS = ENV_ERC20_CONTRACT_ADDRESS;
+const ENV_DISTRIBUTER_CONTRACT_ADDRESS = "DISTRIBUTER_CONTRACT_ADDRESS";
+exports.ENV_DISTRIBUTER_CONTRACT_ADDRESS = ENV_DISTRIBUTER_CONTRACT_ADDRESS;
