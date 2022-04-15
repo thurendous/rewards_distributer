@@ -258,3 +258,7 @@ Reentrancy攻撃から守るためのコントラクト。継承することで�
 - IERC20に加えて、`decimals()`、`name()`、`symbol()`のインターフェイスが追加されている。
 - 今回`decimals()`、`transfer()`、`symbol()`が使われている
 
+
+> Example contracts:
+> - Proxy side contract: https://polygonscan.com/address/0xfbCf9Ed83370C99Bc58cAC8672EF62855f28aE22#code
+> - Implementation side contract: https://polygonscan.com/address/0xba9d2ed1217d496e4fd2e2f79d0e6f95a582425c#code
