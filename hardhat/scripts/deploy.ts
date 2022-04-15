@@ -30,7 +30,7 @@ const SHOULD_RECIPIENT_CLAIM_REWARD = true;
 const SHOULD_GENERATE_ENV_FILE = true;
 const SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS = true;
 const SHOULD_USE_JSON_FOR_TARGET_RECIPIENTS = true;
-const SHOULD_USE_EXTERNAL_ERC20_TOKEN = true; // Set true if you want to use external token address
+const SHOULD_USE_EXTERNAL_ERC20_TOKEN = false; // Set true if you want to use external token address
 
 /*
  * This script deploys contracts using ERC20 token. In local mode, it uses
@@ -44,7 +44,6 @@ async function main() {
     console.log(`SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS=${getYesOrNo(SHOULD_GENERATE_JSON_FOR_TARGET_RECIPIENTS)}`);
     console.log(`SHOULD_USE_JSON_FOR_TARGET_RECIPIENTS=${getYesOrNo(SHOULD_USE_JSON_FOR_TARGET_RECIPIENTS)}`);
     console.log(`SHOULD_USE_EXTERNAL_ERC20_TOKEN=${getYesOrNo(SHOULD_USE_EXTERNAL_ERC20_TOKEN)}`);
-
 
     const [owner, recipient1, recipient2] = await ethers.getSigners();
     const recipientsWithSignature = [recipient1, recipient2];

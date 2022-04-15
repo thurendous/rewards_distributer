@@ -76,9 +76,16 @@ Following files must be updated prioer to the installation process.
 - $ cd hardhat 
 - Prepare .env using .env.example.  
 
+# localhost Hardhat, deploy
 If you want to use localnet, do followings:
-- $ npx hardhat node
-- $ npx hardhat run scripts/deploy.ts --network localhost
+- $ npm run hnode
+
+```typescript
+//./scripts/deploy.ts
+// Please change line 46 as follows.
+const SHOULD_USE_EXTERNAL_ERC20_TOKEN = false;
+```
+- $ npm run deploy:local ./scripts/deploy.ts
 
 Whenever hardhat compiles and produces new typechains (this is exported under ./hardhat/typechain), copy typechains in hardhat/typechain/ to /frontend/src/typechain/ so that frontend code can use latest definitions. In addition, change the front-end codebase accordingly.
 

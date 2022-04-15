@@ -35,6 +35,12 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    hardhat: {
+      chainId: 1337,
+      gas: 12000000,
+      gasPrice: "auto",
+      blockGasLimit: 12000000,
+    },
     rinkeby: {
       url: ENV.RINKEBY_URL || "",
       accounts:
