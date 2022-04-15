@@ -38,7 +38,7 @@ import {
  */
 async function main() {
   
-    // change the contract address to the one you use
+    // get the current using contract addresses
     const {
         ERC20_CONTRACT_ADDRESS,
         DISTRIBUTER_CONTRACT_ADDRESS,
