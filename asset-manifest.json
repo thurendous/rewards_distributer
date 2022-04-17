@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/rewards_distributer/static/css/main.e6c13ad2.css",
+    "main.js": "/rewards_distributer/static/js/main.711c9466.js",
+    "static/js/780.f0338de0.chunk.js": "/rewards_distributer/static/js/780.f0338de0.chunk.js",
+    "static/js/538.eada4359.chunk.js": "/rewards_distributer/static/js/538.eada4359.chunk.js",
+    "static/js/915.fc3f30b8.chunk.js": "/rewards_distributer/static/js/915.fc3f30b8.chunk.js",
+    "static/js/787.c39012cf.chunk.js": "/rewards_distributer/static/js/787.c39012cf.chunk.js",
+    "static/js/60.84f8b280.chunk.js": "/rewards_distributer/static/js/60.84f8b280.chunk.js",
+    "static/js/602.14288a59.chunk.js": "/rewards_distributer/static/js/602.14288a59.chunk.js",
+    "static/js/563.ad1c2bc8.chunk.js": "/rewards_distributer/static/js/563.ad1c2bc8.chunk.js",
+    "static/js/196.4f7b63ed.chunk.js": "/rewards_distributer/static/js/196.4f7b63ed.chunk.js",
+    "static/js/986.0ac7edfc.chunk.js": "/rewards_distributer/static/js/986.0ac7edfc.chunk.js",
+    "index.html": "/rewards_distributer/index.html",
+    "main.e6c13ad2.css.map": "/rewards_distributer/static/css/main.e6c13ad2.css.map",
+    "main.711c9466.js.map": "/rewards_distributer/static/js/main.711c9466.js.map",
+    "780.f0338de0.chunk.js.map": "/rewards_distributer/static/js/780.f0338de0.chunk.js.map",
+    "538.eada4359.chunk.js.map": "/rewards_distributer/static/js/538.eada4359.chunk.js.map",
+    "915.fc3f30b8.chunk.js.map": "/rewards_distributer/static/js/915.fc3f30b8.chunk.js.map",
+    "787.c39012cf.chunk.js.map": "/rewards_distributer/static/js/787.c39012cf.chunk.js.map",
+    "60.84f8b280.chunk.js.map": "/rewards_distributer/static/js/60.84f8b280.chunk.js.map",
+    "196.4f7b63ed.chunk.js.map": "/rewards_distributer/static/js/196.4f7b63ed.chunk.js.map",
+    "986.0ac7edfc.chunk.js.map": "/rewards_distributer/static/js/986.0ac7edfc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.711c9466.js"
+  ]
+}
